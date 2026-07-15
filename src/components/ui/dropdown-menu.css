@@ -1,0 +1,192 @@
+/**
+ * Premium dropdown panel — Metronic-inspired fade+rise feel (original tokens).
+ */
+
+@keyframes awa-dropdown-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes awa-dropdown-out {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+
+.awa-dropdown-panel {
+  z-index: var(--z-dropdown);
+  min-width: 12rem;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  background: var(--color-surface);
+  padding: 0;
+  color: var(--color-text-primary);
+  box-shadow:
+    0 4px 6px -1px rgba(15, 23, 42, 0.05),
+    0 16px 40px -8px rgba(15, 23, 42, 0.14);
+  transform-origin: var(--radix-dropdown-menu-content-transform-origin);
+}
+
+.awa-dropdown-panel[data-state='open'] {
+  animation: awa-dropdown-in 520ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.awa-dropdown-panel[data-state='closed'] {
+  animation: awa-dropdown-out 160ms ease-in forwards;
+}
+
+.awa-dropdown-user-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 16px 14px;
+  background: color-mix(in srgb, var(--color-surface-sunken) 65%, transparent);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.awa-dropdown-separator {
+  height: 1px;
+  margin: 6px 0;
+  background: var(--color-border-subtle);
+}
+
+.awa-dropdown-item {
+  position: relative;
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+  user-select: none;
+  align-items: center;
+  gap: 12px;
+  border-radius: 8px;
+  margin: 0 6px;
+  width: calc(100% - 12px);
+  padding: 10px 12px;
+  outline: none;
+  transition:
+    background-color 200ms ease,
+    color 200ms ease;
+}
+
+.awa-dropdown-item--rich {
+  align-items: flex-start;
+}
+
+.awa-dropdown-item:focus,
+.awa-dropdown-item:hover {
+  background: var(--color-surface-sunken);
+}
+
+.awa-dropdown-item:focus .awa-dropdown-item-title,
+.awa-dropdown-item:hover .awa-dropdown-item-title {
+  color: var(--color-primary);
+}
+
+.awa-dropdown-item[data-disabled] {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.awa-dropdown-item-icon {
+  display: inline-flex;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: var(--color-surface-sunken);
+  color: var(--color-text-secondary);
+  transition:
+    background-color 200ms ease,
+    color 200ms ease;
+}
+
+.awa-dropdown-item:hover .awa-dropdown-item-icon,
+.awa-dropdown-item:focus .awa-dropdown-item-icon {
+  background: color-mix(in srgb, var(--color-primary-soft) 80%, white);
+  color: var(--color-primary);
+}
+
+.awa-dropdown-item-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.awa-dropdown-item-body {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  gap: 2px;
+  text-align: start;
+}
+
+.awa-dropdown-item-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  line-height: 1.3;
+  transition: color 200ms ease;
+}
+
+.awa-dropdown-item-desc {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-text-muted);
+  line-height: 1.35;
+}
+
+.awa-dropdown-item--plain {
+  font-size: 13px;
+  font-weight: 500;
+  gap: 10px;
+}
+
+.awa-dropdown-item--plain svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: var(--color-text-secondary);
+}
+
+.awa-dropdown-item--plain:hover svg,
+.awa-dropdown-item--plain:focus svg {
+  color: var(--color-primary);
+}
+
+.awa-dropdown-item--danger .awa-dropdown-item-title,
+.awa-dropdown-item--danger .awa-dropdown-item-icon {
+  color: var(--color-danger);
+}
+
+.awa-dropdown-item--danger:hover,
+.awa-dropdown-item--danger:focus {
+  background: var(--color-danger-soft);
+}
+
+.awa-dropdown-item--danger:hover .awa-dropdown-item-icon,
+.awa-dropdown-item--danger:focus .awa-dropdown-item-icon {
+  background: color-mix(in srgb, var(--color-danger-soft) 70%, white);
+  color: var(--color-danger);
+}
+
+.awa-dropdown-footer {
+  display: flex;
+  gap: 8px;
+  padding: 10px 12px 12px;
+  border-top: 1px solid var(--color-border-subtle);
+  background: color-mix(in srgb, var(--color-surface-sunken) 40%, transparent);
+}

@@ -1,0 +1,7 @@
+export { AppShell } from './AppShell'
+export { Sidebar, SidebarSection } from './Sidebar'
+export { Header } from './Header'
+export { PageHeader, type PageHeaderProps } from './PageHeader'
+export { Breadcrumbs, type BreadcrumbsProps, type BreadcrumbItem } from './Breadcrumbs'
+export { WorkspaceSwitcher, type WorkspaceSwitcherProps } from './WorkspaceSwitcher'
+export { ContentContainer, type ContentContainerProps } from './ContentContainer'

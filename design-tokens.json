@@ -1,0 +1,135 @@
+{
+  "$schema": "https://design-tokens.org/schemas/v1.json",
+  "name": "AWA UI Design Tokens",
+  "version": "1.0.0",
+  "description": "Universal Admin Design System tokens for AWA UI",
+  "color": {
+    "light": {
+      "canvas": { "value": "#F4F6F9", "type": "color" },
+      "surface": { "value": "#FFFFFF", "type": "color" },
+      "surfaceRaised": { "value": "#FFFFFF", "type": "color" },
+      "surfaceSunken": { "value": "#EEF1F6", "type": "color" },
+      "ink": { "value": "#1A2332", "type": "color" },
+      "textPrimary": { "value": "#1A2332", "type": "color" },
+      "textSecondary": { "value": "#5B6B7C", "type": "color" },
+      "textMuted": { "value": "#8A97A8", "type": "color" },
+      "border": { "value": "#E2E8F0", "type": "color" },
+      "borderStrong": { "value": "#CBD5E1", "type": "color" },
+      "primary": { "value": "#5B5FEF", "type": "color" },
+      "primaryHover": { "value": "#4A4ED9", "type": "color" },
+      "primarySoft": { "value": "#EEF0FF", "type": "color" },
+      "secondary": { "value": "#14B8A6", "type": "color" },
+      "secondarySoft": { "value": "#E6FAF7", "type": "color" },
+      "success": { "value": "#16A34A", "type": "color" },
+      "warning": { "value": "#D97706", "type": "color" },
+      "danger": { "value": "#DC2626", "type": "color" },
+      "info": { "value": "#0284C7", "type": "color" },
+      "neutral": { "value": "#64748B", "type": "color" }
+    },
+    "dark": {
+      "canvas": { "value": "#12151C", "type": "color" },
+      "surface": { "value": "#1A1E28", "type": "color" },
+      "surfaceRaised": { "value": "#222733", "type": "color" },
+      "surfaceSunken": { "value": "#0E1117", "type": "color" },
+      "ink": { "value": "#E8EDF5", "type": "color" },
+      "textPrimary": { "value": "#E8EDF5", "type": "color" },
+      "textSecondary": { "value": "#9AA8BA", "type": "color" },
+      "textMuted": { "value": "#6B7A8D", "type": "color" },
+      "border": { "value": "#2C3342", "type": "color" },
+      "borderStrong": { "value": "#3D4658", "type": "color" },
+      "primary": { "value": "#7B7FF5", "type": "color" },
+      "primaryHover": { "value": "#8E91F7", "type": "color" },
+      "primarySoft": { "value": "#252A4A", "type": "color" },
+      "secondary": { "value": "#2DD4BF", "type": "color" },
+      "secondarySoft": { "value": "#16332F", "type": "color" },
+      "success": { "value": "#22C55E", "type": "color" },
+      "warning": { "value": "#F59E0B", "type": "color" },
+      "danger": { "value": "#F87171", "type": "color" },
+      "info": { "value": "#38BDF8", "type": "color" },
+      "neutral": { "value": "#94A3B8", "type": "color" }
+    }
+  },
+  "spacing": {
+    "1": { "value": "4px", "type": "spacing" },
+    "2": { "value": "8px", "type": "spacing" },
+    "3": { "value": "12px", "type": "spacing" },
+    "4": { "value": "16px", "type": "spacing" },
+    "5": { "value": "20px", "type": "spacing" },
+    "6": { "value": "24px", "type": "spacing" },
+    "8": { "value": "32px", "type": "spacing" },
+    "10": { "value": "40px", "type": "spacing" },
+    "12": { "value": "48px", "type": "spacing" },
+    "16": { "value": "64px", "type": "spacing" }
+  },
+  "radius": {
+    "sm": { "value": "6px", "type": "borderRadius" },
+    "md": { "value": "8px", "type": "borderRadius" },
+    "lg": { "value": "12px", "type": "borderRadius" },
+    "xl": { "value": "16px", "type": "borderRadius" },
+    "2xl": { "value": "20px", "type": "borderRadius" },
+    "full": { "value": "9999px", "type": "borderRadius" }
+  },
+  "typography": {
+    "fontFamily": {
+      "sans": { "value": "Manrope, Segoe UI, system-ui, sans-serif", "type": "fontFamilies" },
+      "mono": { "value": "JetBrains Mono, SF Mono, Consolas, monospace", "type": "fontFamilies" }
+    },
+    "fontSize": {
+      "display": { "value": "44px", "type": "fontSizes" },
+      "h1": { "value": "36px", "type": "fontSizes" },
+      "h2": { "value": "30px", "type": "fontSizes" },
+      "h3": { "value": "24px", "type": "fontSizes" },
+      "h4": { "value": "20px", "type": "fontSizes" },
+      "h5": { "value": "18px", "type": "fontSizes" },
+      "h6": { "value": "16px", "type": "fontSizes" },
+      "body": { "value": "15px", "type": "fontSizes" },
+      "bodySmall": { "value": "13px", "type": "fontSizes" },
+      "caption": { "value": "12px", "type": "fontSizes" },
+      "label": { "value": "13px", "type": "fontSizes" }
+    },
+    "fontWeight": {
+      "regular": { "value": "400", "type": "fontWeights" },
+      "medium": { "value": "500", "type": "fontWeights" },
+      "semibold": { "value": "600", "type": "fontWeights" },
+      "bold": { "value": "700", "type": "fontWeights" }
+    }
+  },
+  "shadow": {
+    "sm": { "value": "0 1px 3px rgba(26, 35, 50, 0.08)", "type": "boxShadow" },
+    "md": { "value": "0 4px 12px rgba(26, 35, 50, 0.08)", "type": "boxShadow" },
+    "lg": { "value": "0 12px 32px rgba(26, 35, 50, 0.1)", "type": "boxShadow" }
+  },
+  "motion": {
+    "duration": {
+      "fast": { "value": "120ms", "type": "duration" },
+      "base": { "value": "180ms", "type": "duration" },
+      "slow": { "value": "220ms", "type": "duration" }
+    },
+    "easing": {
+      "standard": { "value": "cubic-bezier(0.22, 1, 0.36, 1)", "type": "cubicBezier" }
+    }
+  },
+  "component": {
+    "controlHeight": {
+      "sm": { "value": "32px", "type": "sizing" },
+      "md": { "value": "40px", "type": "sizing" },
+      "lg": { "value": "44px", "type": "sizing" }
+    },
+    "iconSize": {
+      "14": { "value": "14px", "type": "sizing" },
+      "16": { "value": "16px", "type": "sizing" },
+      "18": { "value": "18px", "type": "sizing" },
+      "20": { "value": "20px", "type": "sizing" },
+      "24": { "value": "24px", "type": "sizing" },
+      "32": { "value": "32px", "type": "sizing" }
+    },
+    "sidebarWidth": {
+      "default": { "value": "280px", "type": "sizing" },
+      "compact": { "value": "224px", "type": "sizing" },
+      "icon": { "value": "72px", "type": "sizing" }
+    },
+    "headerHeight": {
+      "default": { "value": "70px", "type": "sizing" }
+    }
+  }
+}

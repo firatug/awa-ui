@@ -1,0 +1,207 @@
+/**
+ * Exact Pleasure/MCM .nav-menu hamburger (6 patties).
+ * Closed = 3 lines · hover = slide swap · active = X · rotating = 800ms spin
+ */
+
+@keyframes awa-nav-menu-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.awa-nav-menu {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  border-radius: 12px;
+  background: var(--color-surface);
+  box-shadow: 0 2px 12px rgba(15, 23, 42, 0.06);
+  cursor: pointer;
+  appearance: none;
+  padding: 0;
+}
+
+.awa-nav-menu.is-active {
+  /* Match search input height — sits flush left of the field */
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  box-shadow: none;
+  border-color: transparent;
+}
+
+.awa-nav-menu:disabled {
+  pointer-events: none;
+}
+
+/* Scale lives on wrapper so .hamburger transform stays free for spin */
+.awa-nav-menu-scale {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-origin: 50% 50%;
+}
+
+.awa-nav-menu.is-active .awa-nav-menu-scale {
+  transform: scale(0.78);
+}
+
+.awa-nav-menu .hamburger {
+  display: block;
+  width: 26px;
+  height: 16px;
+  position: relative;
+  margin: 0 auto;
+  overflow: visible;
+  transform-origin: 50% 30%;
+}
+
+/* Closed 3-lines — nudge down so they sit true-center in the square */
+.awa-nav-menu:not(.is-active) .hamburger {
+  transform: translateY(5px);
+  transform-origin: 50% 50%;
+}
+
+.awa-nav-menu .hamburger .patty {
+  position: absolute;
+  left: 0;
+  width: 26px;
+  height: 3px;
+  background: var(--color-primary, #1d1d26);
+  display: block;
+  border-radius: 0;
+  transform: translate3d(0, 0, 0);
+  transition: all 300ms cubic-bezier(0.17, 0.67, 0.6, 1.3);
+}
+
+.awa-nav-menu .hamburger .patty:nth-child(1) {
+  top: -6px;
+  left: -15px;
+  opacity: 0;
+  transition-delay: 300ms;
+}
+
+.awa-nav-menu .hamburger .patty:nth-child(2) {
+  top: 0;
+  left: -15px;
+  opacity: 0;
+  transition-delay: 200ms;
+}
+
+.awa-nav-menu .hamburger .patty:nth-child(3) {
+  top: 6px;
+  left: -15px;
+  opacity: 0;
+  transition-delay: 100ms;
+}
+
+.awa-nav-menu .hamburger .patty:nth-child(4) {
+  top: -6px;
+  opacity: 1;
+  transition-delay: 300ms;
+}
+
+.awa-nav-menu .hamburger .patty:nth-child(5) {
+  top: 0;
+  opacity: 1;
+  transition-delay: 200ms;
+}
+
+.awa-nav-menu .hamburger .patty:nth-child(6) {
+  top: 6px;
+  opacity: 1;
+  transition-delay: 100ms;
+}
+
+/* Hover — lines slide right / left set fades in (MCM exact) */
+.awa-nav-menu:not(.is-active):hover .patty {
+  transform: translate3d(15px, 0, 0);
+}
+
+.awa-nav-menu:not(.is-active):hover .patty:nth-child(1) {
+  opacity: 1;
+  transition-delay: 100ms;
+}
+
+.awa-nav-menu:not(.is-active):hover .patty:nth-child(2) {
+  opacity: 1;
+  transition-delay: 200ms;
+}
+
+.awa-nav-menu:not(.is-active):hover .patty:nth-child(3) {
+  opacity: 1;
+  transition-delay: 300ms;
+}
+
+.awa-nav-menu:not(.is-active):hover .patty:nth-child(4) {
+  opacity: 0;
+  transition-delay: 100ms;
+}
+
+.awa-nav-menu:not(.is-active):hover .patty:nth-child(5) {
+  opacity: 0;
+  transition-delay: 200ms;
+}
+
+.awa-nav-menu:not(.is-active):hover .patty:nth-child(6) {
+  opacity: 0;
+  transition-delay: 300ms;
+}
+
+/* Active = X */
+.awa-nav-menu.is-active .patty:nth-child(1) {
+  opacity: 1;
+  transform: rotateZ(45deg) translate(18px, -4px);
+}
+
+.awa-nav-menu.is-active .patty:nth-child(3) {
+  opacity: 1;
+  transform: rotateZ(-45deg) translate(12px, 9px);
+}
+
+.awa-nav-menu.is-active .patty:nth-child(2),
+.awa-nav-menu.is-active .patty:nth-child(4),
+.awa-nav-menu.is-active .patty:nth-child(5),
+.awa-nav-menu.is-active .patty:nth-child(6) {
+  opacity: 0;
+}
+
+.awa-nav-menu.is-active:hover .patty:nth-child(4),
+.awa-nav-menu.is-active:hover .patty:nth-child(5),
+.awa-nav-menu.is-active:hover .patty:nth-child(6) {
+  opacity: 0;
+}
+
+/* Close spin — owns .hamburger transform (scale is on wrapper) */
+.awa-nav-menu.is-rotating .hamburger {
+  animation: awa-nav-menu-spin 800ms linear;
+  transform-origin: 50% 30%;
+}
+
+.awa-nav-menu.is-rotating .patty {
+  transition: none;
+}
+
+.awa-sidebar-body {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  flex-direction: column;
+  transition: opacity 280ms cubic-bezier(0.35, 0, 0.25, 1);
+}
+
+.awa-sidebar-body.is-closing {
+  opacity: 0;
+  pointer-events: none;
+  transition-delay: 200ms;
+}

@@ -1,0 +1,630 @@
+{
+  "app": {
+    "tagline": "Universal Admin Design System",
+    "description": "{{appName}} is a modern, minimal, premium admin design system and UI kit for SaaS, CRM, ERP, and multi-tenant products.",
+    "welcome": "Welcome to {{appName}}",
+    "welcomeBack": "Welcome back to {{appName}}",
+    "metaDescription": "Build beautiful admin experiences with {{appName}} — components, layouts, and themes for modern products.",
+    "version": "Version {{version}}",
+    "builtWith": "Built with {{appName}}"
+  },
+  "nav": {
+    "groups": {
+      "dashboards": "Dashboards",
+      "custom": "Custom",
+      "applications": "Applications",
+      "layout": "Layout",
+      "crud": "CRUD",
+      "components": "Components",
+      "designSystem": "Design System",
+      "tables": "Tables",
+      "layouts": "Layouts",
+      "apps": "Apps",
+      "pages": "Pages",
+      "errors": "Error Pages",
+      "documentation": "Documentation"
+    },
+    "dashboards": {
+      "overview": "Overview",
+      "analytics": "Analytics",
+      "saas": "SaaS",
+      "crm": "CRM",
+      "projects": "Projects",
+      "finance": "Finance"
+    },
+    "designSystem": {
+      "root": "Design System",
+      "typography": "Typography",
+      "colors": "Colors",
+      "playground": "Playground"
+    },
+    "components": {
+      "buttons": "Buttons",
+      "forms": "Forms",
+      "inputs": "Inputs",
+      "selection": "Selection",
+      "feedback": "Feedback",
+      "navigation": "Navigation",
+      "dataDisplay": "Data Display",
+      "charts": "Charts"
+    },
+    "tables": {
+      "basic": "Basic Table",
+      "advanced": "Advanced Table"
+    },
+    "layouts": {
+      "default": "Default Layout",
+      "compact": "Compact Layout",
+      "icon": "Icon Sidebar",
+      "horizontal": "Horizontal Nav",
+      "boxed": "Boxed Layout",
+      "fullWidth": "Full Width",
+      "rtlDemo": "RTL Demo"
+    },
+    "apps": {
+      "calendar": "Calendar",
+      "kanban": "Kanban",
+      "chat": "Chat",
+      "inbox": "Inbox",
+      "fileManager": "File Manager",
+      "tasks": "Tasks"
+    },
+    "pages": {
+      "auth": "Authentication",
+      "authLogin": "Login",
+      "authRegister": "Register",
+      "authForgot": "Forgot Password",
+      "authReset": "Reset Password",
+      "authVerify": "Verify Email",
+      "users": "Users",
+      "roles": "Roles & Permissions",
+      "settings": "Settings",
+      "settingsGeneral": "General",
+      "settingsAccount": "Account",
+      "settingsSecurity": "Security",
+      "settingsNotifications": "Notifications",
+      "settingsAppearance": "Appearance",
+      "profile": "Profile",
+      "billing": "Billing",
+      "pricing": "Pricing",
+      "invoice": "Invoice"
+    },
+    "errors": {
+      "401": "401 Unauthorized",
+      "403": "403 Forbidden",
+      "404": "404 Not Found",
+      "429": "429 Too Many Requests",
+      "500": "500 Server Error",
+      "503": "503 Service Unavailable",
+      "maintenance": "Maintenance",
+      "comingSoon": "Coming Soon"
+    },
+    "docs": {
+      "gettingStarted": "Getting Started",
+      "theming": "Theming",
+      "tokens": "Design Tokens",
+      "i18n": "Internationalization",
+      "changelog": "Changelog"
+    }
+  },
+  "actions": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "create": "Create",
+    "edit": "Edit",
+    "delete": "Delete",
+    "search": "Search",
+    "filter": "Filter",
+    "export": "Export",
+    "import": "Import",
+    "refresh": "Refresh",
+    "confirm": "Confirm",
+    "close": "Close",
+    "back": "Back",
+    "ok": "OK",
+    "next": "Next",
+    "previous": "Previous",
+    "apply": "Apply",
+    "reset": "Reset",
+    "viewAll": "View all",
+    "learnMore": "Learn more",
+    "copy": "Copy",
+    "duplicate": "Duplicate",
+    "download": "Download",
+    "upload": "Upload",
+    "submit": "Submit",
+    "clear": "Clear",
+    "selectAll": "Select all",
+    "deselectAll": "Deselect all",
+    "showMore": "Show more",
+    "showLess": "Show less",
+    "retry": "Retry",
+    "continue": "Continue",
+    "signOut": "Sign out"
+  },
+  "header": {
+    "search": "Search…",
+    "searchPlaceholder": "Search pages, components, docs…",
+    "notifications": "Notifications",
+    "messages": "Messages",
+    "quickCreate": "Quick create",
+    "language": "Language",
+    "theme": "Theme",
+    "fullscreen": "Fullscreen",
+    "exitFullscreen": "Exit fullscreen",
+    "profile": "Profile",
+    "settings": "Settings",
+    "profileDescription": "View and edit your profile",
+    "settingsDescription": "Account preferences & security",
+    "billingDescription": "Plans, invoices and payments",
+    "logout": "Log out",
+    "account": "Account",
+    "help": "Help & support",
+    "noNotifications": "No new notifications",
+    "noMessages": "No new messages",
+    "markAllRead": "Mark all as read",
+    "viewProfile": "View profile",
+    "tenant": "Tenant",
+    "userMenu": "User menu",
+    "openMenu": "Open menu",
+    "commandPalette": "Command palette",
+    "newProject": "New project",
+    "newTask": "New task",
+    "newUser": "New user",
+    "newInvoice": "New invoice"
+  },
+  "sidebar": {
+    "favorites": "Shortcuts",
+    "workspace": "Workspace",
+    "workspaces": "Workspaces",
+    "createWorkspace": "Create workspace",
+    "manageWorkspaces": "Manage workspaces",
+    "collapse": "Collapse sidebar",
+    "expand": "Expand sidebar",
+    "hide": "Hide menu",
+    "show": "Show menu",
+    "searchMenu": "Search menu…",
+    "pinned": "Pinned",
+    "recent": "Recent",
+    "noResults": "No menu items found",
+    "mainNavigation": "Main navigation",
+    "home": "Home"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System",
+    "primaryColor": "Primary color",
+    "sidebarMode": "Sidebar mode",
+    "contentWidth": "Content width",
+    "density": "Density",
+    "radius": "Border radius",
+    "font": "Font family",
+    "rtl": "Right-to-left layout",
+    "reducedMotion": "Reduced motion",
+    "customizerTitle": "Theme customizer",
+    "reset": "Reset to defaults",
+    "sidebarDefault": "Default",
+    "sidebarCompact": "Compact",
+    "sidebarIcon": "Icon only",
+    "sidebarHover": "Expand on hover",
+    "widthDefault": "Default",
+    "widthFull": "Full width",
+    "widthNarrow": "Narrow",
+    "widthBoxed": "Boxed",
+    "densityCompact": "Compact",
+    "densityDefault": "Default",
+    "densityComfortable": "Comfortable",
+    "radiusSharp": "Sharp",
+    "radiusDefault": "Default",
+    "radiusRounded": "Rounded",
+    "fontManrope": "Manrope",
+    "fontInter": "Inter",
+    "fontGeist": "Geist",
+    "headerStyle": "Header style",
+    "headerFixed": "Fixed",
+    "headerStatic": "Static",
+    "sidebarFixed": "Fixed sidebar",
+    "customColor": "Custom color",
+    "fixedHeader": "Fixed header"
+  },
+  "pages": {
+    "dashboards": {
+      "title": "Dashboards",
+      "description": "Overview metrics, KPIs, and activity across your product."
+    },
+    "overview": {
+      "title": "Overview",
+      "description": "High-level summary of performance and key indicators."
+    },
+    "analytics": {
+      "title": "Analytics",
+      "description": "Deep dive into traffic, conversion, and user behavior."
+    },
+    "saas": {
+      "title": "SaaS Dashboard",
+      "description": "Subscription, MRR, churn, and growth metrics at a glance."
+    },
+    "crm": {
+      "title": "CRM Dashboard",
+      "description": "Pipeline, deals, contacts, and sales activity."
+    },
+    "projects": {
+      "title": "Projects",
+      "description": "Track milestones, deliverables, and team progress."
+    },
+    "finance": {
+      "title": "Finance",
+      "description": "Revenue, expenses, cash flow, and financial reporting."
+    },
+    "components": {
+      "title": "Components",
+      "description": "Explore {{appName}} UI primitives and patterns."
+    },
+    "settings": {
+      "title": "Settings",
+      "description": "Manage account, workspace, and application preferences."
+    },
+    "auth": {
+      "title": "Authentication",
+      "description": "Sign-in, registration, and password recovery flows."
+    },
+    "errors": {
+      "title": "Error Pages",
+      "description": "404, 500, and maintenance state templates."
+    },
+    "docs": {
+      "title": "Documentation",
+      "description": "Guides and references for building with {{appName}}."
+    },
+    "users": {
+      "title": "Users",
+      "description": "Manage team members, invites, and access."
+    },
+    "roles": {
+      "title": "Roles & Permissions",
+      "description": "Define roles and control what each user can access."
+    },
+    "profile": {
+      "title": "Profile",
+      "description": "Your personal information and preferences."
+    },
+    "billing": {
+      "title": "Billing",
+      "description": "Plans, payment methods, and invoices."
+    },
+    "pricing": {
+      "title": "Pricing",
+      "description": "Compare plans and upgrade your subscription."
+    },
+    "invoice": {
+      "title": "Invoice",
+      "description": "View and download billing invoices."
+    },
+    "calendar": {
+      "title": "Calendar",
+      "description": "Schedule events, meetings, and deadlines."
+    },
+    "kanban": {
+      "title": "Kanban",
+      "description": "Visualize work on boards with drag-and-drop columns."
+    },
+    "chat": {
+      "title": "Chat",
+      "description": "Real-time messaging and team conversations."
+    },
+    "inbox": {
+      "title": "Inbox",
+      "description": "Unified messages and notifications."
+    },
+    "fileManager": {
+      "title": "File Manager",
+      "description": "Browse, upload, and organize files."
+    },
+    "tasks": {
+      "title": "Tasks",
+      "description": "Create, assign, and track tasks."
+    },
+    "tables": {
+      "title": "Tables",
+      "description": "Sortable, filterable data tables with pagination."
+    },
+    "charts": {
+      "title": "Charts",
+      "description": "Line, bar, area, and pie chart examples."
+    },
+    "playground": {
+      "title": "Playground",
+      "description": "Experiment with components and theme tokens live."
+    },
+    "typography": {
+      "title": "Typography",
+      "description": "Type scale, headings, and text styles."
+    },
+    "colors": {
+      "title": "Colors",
+      "description": "Palette, semantic colors, and usage guidelines."
+    },
+    "theming": {
+      "title": "Theming",
+      "description": "Customize light/dark modes, density, and layout."
+    },
+    "tokens": {
+      "title": "Design Tokens",
+      "description": "Spacing, radius, shadows, and CSS variables."
+    },
+    "i18n": {
+      "title": "Internationalization",
+      "description": "Locale switching and translation patterns in {{appName}}."
+    },
+    "changelog": {
+      "title": "Changelog",
+      "description": "Release notes and version history."
+    },
+    "notFound": {
+      "title": "Page not found",
+      "description": "The page you are looking for does not exist or was moved."
+    },
+    "serverError": {
+      "title": "Something went wrong",
+      "description": "An unexpected error occurred. Please try again later."
+    },
+    "maintenance": {
+      "title": "Under maintenance",
+      "description": "We are performing scheduled maintenance. Check back soon."
+    },
+    "forbidden": {
+      "title": "Access denied",
+      "description": "You do not have permission to view this page."
+    }
+  },
+  "auth": {
+    "login": "Log in",
+    "register": "Register",
+    "email": "Email address",
+    "password": "Password",
+    "confirmPassword": "Confirm password",
+    "forgotPassword": "Forgot password?",
+    "rememberMe": "Remember me",
+    "signIn": "Sign in",
+    "signUp": "Sign up",
+    "signInTitle": "Sign in to {{appName}}",
+    "signUpTitle": "Create your {{appName}} account",
+    "signInDescription": "Enter your credentials to access your workspace.",
+    "signUpDescription": "Get started with {{appName}} in a few steps.",
+    "resetPassword": "Reset password",
+    "resetPasswordDescription": "Enter your email and we will send you a reset link.",
+    "newPassword": "New password",
+    "currentPassword": "Current password",
+    "sendResetLink": "Send reset link",
+    "backToLogin": "Back to sign in",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "orContinueWith": "Or continue with",
+    "termsAgreement": "By continuing, you agree to our Terms of Service and Privacy Policy.",
+    "verifyEmail": "Verify your email",
+    "verifyEmailDescription": "We sent a verification link to {{email}}.",
+    "twoFactor": "Two-factor authentication",
+    "twoFactorDescription": "Enter the code from your authenticator app.",
+    "verificationCode": "Verification code",
+    "demoCredentials": "Demo credentials",
+    "sessionExpired": "Your session has expired. Please sign in again.",
+    "invalidCredentials": "Invalid email or password.",
+    "passwordUpdated": "Your password has been updated successfully."
+  },
+  "table": {
+    "noData": "No data available",
+    "noResults": "No results match your filters",
+    "loading": "Loading data…",
+    "rowsPerPage": "Rows per page",
+    "page": "Page",
+    "of": "of",
+    "selected": "{{count}} selected",
+    "selected_one": "{{count}} selected",
+    "selected_other": "{{count}} selected",
+    "totalRows": "{{count}} rows total",
+    "totalRows_one": "{{count}} row total",
+    "totalRows_other": "{{count}} rows total",
+    "sortAsc": "Sort ascending",
+    "sortDesc": "Sort descending",
+    "columns": "Columns",
+    "showColumns": "Show columns",
+    "hideColumn": "Hide column",
+    "actions": "Actions",
+    "bulkActions": "Bulk actions",
+    "exportCsv": "Export CSV",
+    "exportExcel": "Export Excel",
+    "density": "Table density",
+    "compact": "Compact",
+    "standard": "Standard",
+    "comfortable": "Comfortable"
+  },
+  "form": {
+    "required": "Required",
+    "optional": "Optional",
+    "invalidEmail": "Enter a valid email address",
+    "invalidUrl": "Enter a valid URL",
+    "minLength": "Must be at least {{min}} characters",
+    "maxLength": "Must be at most {{max}} characters",
+    "passwordMismatch": "Passwords do not match",
+    "selectOption": "Select an option",
+    "pickDate": "Pick a date",
+    "pickTime": "Pick a time",
+    "uploadFile": "Upload file",
+    "dragDrop": "Drag and drop files here, or click to browse",
+    "maxFileSize": "Max file size: {{size}}",
+    "allowedTypes": "Allowed types: {{types}}",
+    "unsavedChanges": "You have unsaved changes",
+    "discardChanges": "Discard changes?",
+    "savedSuccessfully": "Changes saved successfully",
+    "validationError": "Please fix the errors below",
+    "charactersRemaining": "{{count}} characters remaining"
+  },
+  "empty": {
+    "defaultTitle": "Nothing here yet",
+    "defaultDescription": "Get started by creating your first item.",
+    "noSearchResults": "No results found",
+    "noSearchResultsDescription": "Try adjusting your search or filters.",
+    "noNotifications": "You're all caught up",
+    "noNotificationsDescription": "New notifications will appear here.",
+    "noMessages": "No messages",
+    "noMessagesDescription": "Start a conversation to see messages here.",
+    "noFiles": "No files",
+    "noFilesDescription": "Upload files to get started.",
+    "noTasks": "No tasks",
+    "noTasksDescription": "Create a task to track your work.",
+    "errorTitle": "Unable to load data",
+    "errorDescription": "Something went wrong while fetching data.",
+    "offlineTitle": "You are offline",
+    "offlineDescription": "Check your connection and try again."
+  },
+  "status": {
+    "active": "Active",
+    "inactive": "Inactive",
+    "pending": "Pending",
+    "approved": "Approved",
+    "rejected": "Rejected",
+    "draft": "Draft",
+    "published": "Published",
+    "archived": "Archived",
+    "completed": "Completed",
+    "inProgress": "In progress",
+    "cancelled": "Cancelled",
+    "overdue": "Overdue",
+    "online": "Online",
+    "offline": "Offline",
+    "away": "Away",
+    "busy": "Busy",
+    "enabled": "Enabled",
+    "disabled": "Disabled",
+    "success": "Success",
+    "warning": "Warning",
+    "error": "Error",
+    "info": "Info",
+    "new": "New",
+    "beta": "Beta"
+  },
+  "common": {
+    "yes": "Yes",
+    "no": "No",
+    "all": "All",
+    "none": "None",
+    "or": "or",
+    "and": "and",
+    "of": "of",
+    "to": "to",
+    "from": "from",
+    "by": "by",
+    "at": "at",
+    "on": "on",
+    "in": "in",
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "tomorrow": "Tomorrow",
+    "thisWeek": "This week",
+    "lastWeek": "Last week",
+    "thisMonth": "This month",
+    "lastMonth": "Last month",
+    "loading": "Loading…",
+    "saving": "Saving…",
+    "deleting": "Deleting…",
+    "processing": "Processing…",
+    "name": "Name",
+    "description": "Description",
+    "title": "Title",
+    "type": "Type",
+    "status": "Status",
+    "date": "Date",
+    "time": "Time",
+    "createdAt": "Created",
+    "updatedAt": "Updated",
+    "createdBy": "Created by",
+    "updatedBy": "Updated by",
+    "id": "ID",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address",
+    "country": "Country",
+    "city": "City",
+    "language": "Language",
+    "timezone": "Timezone",
+    "currency": "Currency",
+    "amount": "Amount",
+    "total": "Total",
+    "subtotal": "Subtotal",
+    "tax": "Tax",
+    "discount": "Discount",
+    "quantity": "Quantity",
+    "price": "Price",
+    "role": "Role",
+    "permissions": "Permissions",
+    "tags": "Tags",
+    "category": "Category",
+    "priority": "Priority",
+    "low": "Low",
+    "medium": "Medium",
+    "high": "High",
+    "critical": "Critical",
+    "copied": "Copied to clipboard",
+    "copyFailed": "Failed to copy",
+    "comingSoon": "Coming soon",
+    "beta": "Beta",
+    "new": "New",
+    "updated": "Updated",
+    "deleted": "Deleted",
+    "perPage": "Per page",
+    "items": "items",
+    "items_one": "item",
+    "items_other": "items",
+    "results": "results",
+    "results_one": "result",
+    "results_other": "results"
+  },
+  "docs": {
+    "title": "Documentation",
+    "subtitle": "Everything you need to build with {{appName}}",
+    "gettingStarted": "Getting Started",
+    "gettingStartedDescription": "Install, configure, and run your first {{appName}} project.",
+    "installation": "Installation",
+    "installationDescription": "Set up dependencies and project structure.",
+    "projectStructure": "Project structure",
+    "projectStructureDescription": "Learn how folders, routes, and modules are organized.",
+    "configuration": "Configuration",
+    "configurationDescription": "Customize app, theme, and navigation settings.",
+    "theming": "Theming",
+    "themingDescription": "Light/dark modes, tokens, and the theme customizer.",
+    "components": "Components",
+    "componentsDescription": "UI primitives, variants, and composition patterns.",
+    "layouts": "Layouts",
+    "layoutsDescription": "Sidebar, header, content areas, and responsive shells.",
+    "routing": "Routing",
+    "routingDescription": "Pages, nested routes, and navigation guards.",
+    "forms": "Forms",
+    "formsDescription": "Validation, field components, and submission handling.",
+    "tables": "Tables",
+    "tablesDescription": "Sorting, filtering, pagination, and bulk actions.",
+    "charts": "Charts",
+    "chartsDescription": "Data visualization with Recharts integration.",
+    "i18n": "Internationalization",
+    "i18nDescription": "Locales, namespaces, and syncing with user preferences.",
+    "authentication": "Authentication",
+    "authenticationDescription": "Login, register, and protected route patterns.",
+    "deployment": "Deployment",
+    "deploymentDescription": "Build, preview, and deploy to production.",
+    "faq": "FAQ",
+    "faqDescription": "Common questions and troubleshooting tips.",
+    "changelog": "Changelog",
+    "changelogDescription": "Version history and breaking changes.",
+    "apiReference": "API reference",
+    "apiReferenceDescription": "Config objects, hooks, and utility functions.",
+    "contributing": "Contributing",
+    "contributingDescription": "Guidelines for extending {{appName}}.",
+    "onThisPage": "On this page",
+    "lastUpdated": "Last updated",
+    "editPage": "Edit this page",
+    "previousPage": "Previous",
+    "nextPage": "Next",
+    "searchDocs": "Search documentation…",
+    "noResults": "No documentation matches your search."
+  }
+}

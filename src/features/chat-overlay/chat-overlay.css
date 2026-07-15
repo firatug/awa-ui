@@ -1,0 +1,516 @@
+/**
+ * Chat overlay styles — Pleasure/MCM layout replica (black accent).
+ */
+
+.awa-chat-root {
+  --chat-ink: #111118;
+  --chat-ink-soft: #1d1d26;
+  --chat-rail: 80px;
+  --chat-ease: cubic-bezier(0.35, 0, 0.25, 1);
+  --chat-bounce: cubic-bezier(0.17, 0.67, 0.6, 1.3);
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-command);
+  font-family: 'Manrope', 'Segoe UI', system-ui, sans-serif;
+}
+
+.awa-chat-wipe {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--chat-ink);
+  will-change: transform;
+  pointer-events: none;
+}
+
+.awa-chat-shell {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  background: transparent;
+  pointer-events: none;
+}
+
+.awa-chat-shell > * {
+  pointer-events: auto;
+}
+
+.awa-chat-shell.is-closing > .awa-chat-layer {
+  pointer-events: none;
+}
+
+/*
+ * MCM .nav-menu — fixed close control OUTSIDE wipe/content.
+ * This is the menu X (not chat .nav-user .cross).
+ */
+.awa-chat-nav-menu {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: auto;
+  z-index: 30;
+  padding: 0;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  appearance: none;
+}
+
+.awa-chat-hamburger {
+  width: 26px;
+  height: 16px;
+  position: relative;
+  margin: 0 auto;
+  transform-origin: 50% 30%;
+}
+
+.awa-chat-hamburger .patty {
+  position: absolute;
+  left: 0;
+  width: 26px;
+  height: 3px;
+  background: #fff;
+  display: block;
+  border-radius: 0;
+  transform: translate3d(0, 0, 0);
+  transition: all 300ms cubic-bezier(0.17, 0.67, 0.6, 1.3);
+}
+
+/* Idle slots (hidden) — same layout as MCM for correct X offsets */
+.awa-chat-hamburger .patty:nth-child(1) {
+  top: -6px;
+  left: -15px;
+  opacity: 0;
+}
+
+.awa-chat-hamburger .patty:nth-child(2) {
+  top: 0;
+  left: -15px;
+  opacity: 0;
+}
+
+.awa-chat-hamburger .patty:nth-child(3) {
+  top: 6px;
+  left: -15px;
+  opacity: 0;
+}
+
+.awa-chat-hamburger .patty:nth-child(4) {
+  top: -6px;
+  opacity: 1;
+}
+
+.awa-chat-hamburger .patty:nth-child(5) {
+  top: 0;
+  opacity: 1;
+}
+
+.awa-chat-hamburger .patty:nth-child(6) {
+  top: 6px;
+  opacity: 1;
+}
+
+/* Always-open chat = MCM .nav-menu.active X geometry */
+.awa-chat-nav-menu.is-active .patty:nth-child(1) {
+  opacity: 1;
+  transform: rotateZ(45deg) translate(18px, -4px);
+}
+
+.awa-chat-nav-menu.is-active .patty:nth-child(3) {
+  opacity: 1;
+  transform: rotateZ(-45deg) translate(12px, 9px);
+}
+
+.awa-chat-nav-menu.is-active .patty:nth-child(2),
+.awa-chat-nav-menu.is-active .patty:nth-child(4),
+.awa-chat-nav-menu.is-active .patty:nth-child(5),
+.awa-chat-nav-menu.is-active .patty:nth-child(6) {
+  opacity: 0;
+}
+
+/* MCM .nav-menu.active.rotating .hamburger */
+@keyframes awa-menu-spin {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.awa-chat-nav-menu.is-rotating .awa-chat-hamburger {
+  animation: awa-menu-spin 800ms linear;
+  transform-origin: 50% 30%;
+}
+
+/* Left vertical rail — brand only (close is .awa-chat-nav-menu) */
+.awa-chat-rail {
+  width: var(--chat-rail);
+  flex-shrink: 0;
+  background: var(--chat-ink);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+}
+
+.awa-chat-rail.is-closing {
+  /* Fade rail with content @200ms; wipe (dark) stays behind the fixed X */
+  transition: opacity 250ms cubic-bezier(0.35, 0, 0.25, 1) 200ms;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.awa-chat-rail-brand {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 100px;
+}
+
+.awa-chat-rail-brand span {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  text-transform: uppercase;
+  letter-spacing: 0.55em;
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.55);
+  white-space: nowrap;
+  font-family: 'Inter', 'SF Pro Display', system-ui, sans-serif;
+}
+
+/* Layer next to rail */
+.awa-chat-layer {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+/* Top tabs — full width of layer */
+.awa-chat-tabs {
+  display: flex;
+  background: #fff;
+  padding: 32px 32px 0;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.awa-chat-tab {
+  flex: 1;
+  border: 0;
+  background: transparent;
+  padding: 22px 12px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #5c5c66;
+  cursor: pointer;
+  border-radius: 5px;
+  position: relative;
+  transition: color 180ms var(--chat-ease), background 180ms var(--chat-ease);
+}
+
+.awa-chat-tab:hover {
+  color: #1a1a1a;
+}
+
+.awa-chat-tab.is-active {
+  background: var(--chat-ink);
+  color: #fff;
+}
+
+.awa-chat-tab.is-active:hover {
+  color: #fff;
+}
+
+.awa-chat-tab-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  height: 22px;
+  margin-left: 8px;
+  padding: 0 6px;
+  border-radius: 50%;
+  background: #bd362f;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+.awa-chat-body {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  background: #fff;
+  border-top: 1px solid #f0f0f0;
+  margin-top: 20px;
+}
+
+/* List column */
+.awa-chat-list {
+  width: 34%;
+  min-width: 280px;
+  max-width: 420px;
+  border-right: 1px solid #f0f0f0;
+  overflow: auto;
+  background: #fff;
+}
+
+.awa-chat-list-item {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  padding: 18px 20px 18px 20px;
+  border: 0;
+  background: #fff;
+  text-align: left;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+  gap: 14px;
+  transition: background 150ms var(--chat-ease);
+}
+
+.awa-chat-list-item:hover {
+  background: #fafafa;
+}
+
+.awa-chat-list-item.is-selected {
+  background: #f5f5f7;
+}
+
+.awa-chat-list-item.is-selected .awa-chat-list-main {
+  border-bottom-color: transparent;
+}
+
+.awa-chat-list-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  background: #e8e8ec;
+}
+
+.awa-chat-list-main {
+  flex: 1;
+  min-width: 0;
+  padding-right: 8px;
+}
+
+.awa-chat-list-title {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.awa-chat-list-caption {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 13px;
+  line-height: 1.45;
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.awa-chat-list-meta {
+  width: 72px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 12px;
+  padding: 2px 0;
+}
+
+.awa-chat-list-meta svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Conversation column */
+.awa-chat-thread {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: #fff;
+}
+
+.awa-chat-messages {
+  flex: 1;
+  overflow: auto;
+  padding: 24px 30px 20px;
+}
+
+.awa-chat-group {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.awa-chat-group.is-own {
+  flex-direction: row-reverse;
+}
+
+.awa-chat-group-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  background: #e8e8ec;
+}
+
+.awa-chat-bubbles {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: min(70%, 560px);
+}
+
+.awa-chat-bubble {
+  padding: 12px 16px;
+  font-size: 14px;
+  line-height: 1.55;
+  border-radius: 18px;
+  position: relative;
+}
+
+.awa-chat-group:not(.is-own) .awa-chat-bubble {
+  background: #eeeeee;
+  color: #333;
+  border-bottom-left-radius: 4px;
+  align-self: flex-start;
+}
+
+.awa-chat-group.is-own .awa-chat-bubble {
+  background: var(--chat-ink);
+  color: #fff;
+  border-bottom-right-radius: 4px;
+  align-self: flex-end;
+}
+
+.awa-chat-composer {
+  display: flex;
+  align-items: stretch;
+  border-top: 1px solid #f0f0f0;
+  background: #fff;
+  padding: 16px 24px;
+  gap: 12px;
+}
+
+.awa-chat-composer textarea {
+  flex: 1;
+  min-height: 44px;
+  max-height: 100px;
+  resize: none;
+  border: 0;
+  outline: none;
+  font: inherit;
+  font-size: 14px;
+  padding: 12px 4px;
+  color: #1a1a1a;
+  background: transparent;
+}
+
+.awa-chat-composer textarea::placeholder {
+  color: rgba(0, 0, 0, 0.35);
+}
+
+.awa-chat-send {
+  border: 0;
+  background: var(--chat-ink);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0 22px;
+  border-radius: 3px;
+  cursor: pointer;
+  align-self: center;
+  height: 40px;
+  transition: opacity 150ms var(--chat-ease);
+}
+
+.awa-chat-send:hover {
+  opacity: 0.9;
+}
+
+.awa-chat-panel-blank {
+  flex: 1;
+  overflow: auto;
+  padding: 40px 48px;
+}
+
+.awa-chat-notif {
+  display: flex;
+  gap: 16px;
+  padding: 18px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.awa-chat-notif-caption {
+  flex: 1;
+  font-size: 15px;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.awa-chat-notif-meta {
+  width: 70px;
+  text-align: right;
+  color: rgba(0, 0, 0, 0.35);
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.awa-chat-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+}
+
+@media (max-width: 900px) {
+  .awa-chat-list {
+    width: 100%;
+    max-width: none;
+  }
+
+  .awa-chat-body.is-thread-open .awa-chat-list {
+    display: none;
+  }
+
+  .awa-chat-body:not(.is-thread-open) .awa-chat-thread {
+    display: none;
+  }
+
+  .awa-chat-tabs {
+    padding: 16px 12px 0;
+    gap: 6px;
+  }
+
+  .awa-chat-tab {
+    font-size: 13px;
+    padding: 14px 8px;
+  }
+}

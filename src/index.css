@@ -1,0 +1,197 @@
+@import 'tailwindcss';
+@import './theme/theme.css';
+
+@theme inline {
+  --color-canvas: var(--color-canvas);
+  --color-surface: var(--color-surface);
+  --color-surface-raised: var(--color-surface-raised);
+  --color-surface-sunken: var(--color-surface-sunken);
+  --color-ink: var(--color-ink);
+  --color-text-primary: var(--color-text-primary);
+  --color-text-secondary: var(--color-text-secondary);
+  --color-text-muted: var(--color-text-muted);
+  --color-text-inverse: var(--color-text-inverse);
+  --color-border: var(--color-border);
+  --color-border-strong: var(--color-border-strong);
+  --color-border-subtle: var(--color-border-subtle);
+  --color-primary: var(--color-primary);
+  --color-primary-hover: var(--color-primary-hover);
+  --color-primary-active: var(--color-primary-active);
+  --color-primary-soft: var(--color-primary-soft);
+  --color-primary-foreground: var(--color-primary-foreground);
+  --color-secondary: var(--color-secondary);
+  --color-secondary-hover: var(--color-secondary-hover);
+  --color-secondary-soft: var(--color-secondary-soft);
+  --color-secondary-foreground: var(--color-secondary-foreground);
+  --color-success: var(--color-success);
+  --color-success-soft: var(--color-success-soft);
+  --color-warning: var(--color-warning);
+  --color-warning-soft: var(--color-warning-soft);
+  --color-danger: var(--color-danger);
+  --color-danger-soft: var(--color-danger-soft);
+  --color-info: var(--color-info);
+  --color-info-soft: var(--color-info-soft);
+  --color-neutral: var(--color-neutral);
+  --color-neutral-soft: var(--color-neutral-soft);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+  --radius-2xl: var(--radius-2xl);
+  --shadow-xs: var(--shadow-xs);
+  --shadow-sm: var(--shadow-sm);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-xl: var(--shadow-xl);
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    border-color: var(--color-border);
+  }
+
+  html {
+    font-family: var(--font-sans);
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--color-canvas);
+    color: var(--color-text-primary);
+    font-size: var(--text-body);
+    line-height: var(--leading-normal);
+    font-weight: var(--weight-regular);
+  }
+
+  #root {
+    min-height: 100vh;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+    color: var(--color-text-primary);
+    font-weight: var(--weight-semibold);
+    letter-spacing: -0.02em;
+    line-height: var(--leading-tight);
+  }
+
+  h1 {
+    font-size: var(--text-h1);
+  }
+  h2 {
+    font-size: var(--text-h2);
+  }
+  h3 {
+    font-size: var(--text-h3);
+  }
+  h4 {
+    font-size: var(--text-h4);
+  }
+  h5 {
+    font-size: var(--text-h5);
+  }
+  h6 {
+    font-size: var(--text-h6);
+  }
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--color-primary-hover);
+  }
+
+  :focus-visible {
+    outline: none;
+    box-shadow: var(--shadow-focus);
+  }
+
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible,
+  .awa-field-shell input:focus-visible,
+  .awa-field-shell textarea:focus-visible,
+  .awa-field-shell select:focus-visible,
+  .awa-field-shell:focus-within input:focus-visible,
+  .awa-field-shell:focus-within textarea:focus-visible {
+    outline: none;
+    box-shadow: none;
+  }
+
+  ::selection {
+    background: var(--color-primary-soft);
+    color: var(--color-text-primary);
+  }
+
+  code,
+  pre,
+  kbd {
+    font-family: var(--font-mono);
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+}
+
+@layer utilities {
+  .awa-container {
+    width: 100%;
+    max-width: var(--content-max-width);
+    margin-inline: auto;
+    padding-inline: var(--space-4);
+  }
+
+  .awa-surface {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xs);
+  }
+
+  .awa-page {
+    display: flex;
+    flex-direction: column;
+    gap: var(--density-gap);
+    padding: var(--space-6);
+  }
+
+  .awa-field-shell:hover:not(:has(:disabled)):not(:has([aria-invalid='true'])):not([aria-invalid='true']):not(:disabled) {
+    box-shadow: var(--shadow-field-hover);
+  }
+
+  .awa-field-shell:focus-within:not(:has(:disabled)):not(:has([aria-invalid='true'])):not([aria-invalid='true']):not(:disabled),
+  .awa-field-shell:focus:not(:disabled):not([aria-invalid='true']) {
+    box-shadow: var(--shadow-field-focus);
+  }
+
+  @media (max-width: 768px) {
+    .awa-page {
+      padding: var(--space-4);
+    }
+  }
+}

@@ -1,0 +1,630 @@
+{
+  "app": {
+    "tagline": "Evrensel Yönetim Paneli Tasarım Sistemi",
+    "description": "{{appName}}, SaaS, CRM, ERP ve çok kiracılı ürünler için modern, minimal ve premium bir yönetim paneli tasarım sistemi ile UI kitidir.",
+    "welcome": "{{appName}}'ye hoş geldiniz",
+    "welcomeBack": "{{appName}}'ye tekrar hoş geldiniz",
+    "metaDescription": "{{appName}} ile güzel yönetim deneyimleri oluşturun — modern ürünler için bileşenler, düzenler ve temalar.",
+    "version": "Sürüm {{version}}",
+    "builtWith": "{{appName}} ile geliştirildi"
+  },
+  "nav": {
+    "groups": {
+      "dashboards": "Panolar",
+      "custom": "Custom",
+      "applications": "Uygulamalar",
+      "layout": "Layout",
+      "crud": "CRUD",
+      "components": "Bileşenler",
+      "designSystem": "Tasarım Sistemi",
+      "tables": "Tablolar",
+      "layouts": "Düzenler",
+      "apps": "Uygulamalar",
+      "pages": "Sayfalar",
+      "errors": "Hata Sayfaları",
+      "documentation": "Dokümantasyon"
+    },
+    "dashboards": {
+      "overview": "Genel Bakış",
+      "analytics": "Analitik",
+      "saas": "SaaS",
+      "crm": "CRM",
+      "projects": "Projeler",
+      "finance": "Finans"
+    },
+    "designSystem": {
+      "root": "Tasarım Sistemi",
+      "typography": "Tipografi",
+      "colors": "Renkler",
+      "playground": "Oyun Alanı"
+    },
+    "components": {
+      "buttons": "Düğmeler",
+      "forms": "Formlar",
+      "inputs": "Girdiler",
+      "selection": "Seçim",
+      "feedback": "Geri Bildirim",
+      "navigation": "Gezinme",
+      "dataDisplay": "Veri Görüntüleme",
+      "charts": "Grafikler"
+    },
+    "tables": {
+      "basic": "Temel Tablo",
+      "advanced": "Gelişmiş Tablo"
+    },
+    "layouts": {
+      "default": "Varsayılan Düzen",
+      "compact": "Kompakt Düzen",
+      "icon": "İkon Kenar Çubuğu",
+      "horizontal": "Yatay Gezinti",
+      "boxed": "Kutulu Düzen",
+      "fullWidth": "Tam Genişlik",
+      "rtlDemo": "RTL Demosu"
+    },
+    "apps": {
+      "calendar": "Takvim",
+      "kanban": "Kanban",
+      "chat": "Sohbet",
+      "inbox": "Gelen Kutusu",
+      "fileManager": "Dosya Yöneticisi",
+      "tasks": "Görevler"
+    },
+    "pages": {
+      "auth": "Kimlik Doğrulama",
+      "authLogin": "Giriş",
+      "authRegister": "Kayıt",
+      "authForgot": "Şifremi Unuttum",
+      "authReset": "Şifre Sıfırla",
+      "authVerify": "E-posta Doğrula",
+      "users": "Kullanıcılar",
+      "roles": "Roller ve İzinler",
+      "settings": "Ayarlar",
+      "settingsGeneral": "Genel",
+      "settingsAccount": "Hesap",
+      "settingsSecurity": "Güvenlik",
+      "settingsNotifications": "Bildirimler",
+      "settingsAppearance": "Görünüm",
+      "profile": "Profil",
+      "billing": "Faturalandırma",
+      "pricing": "Fiyatlandırma",
+      "invoice": "Fatura"
+    },
+    "errors": {
+      "401": "401 Yetkisiz",
+      "403": "403 Yasak",
+      "404": "404 Bulunamadı",
+      "429": "429 Çok Fazla İstek",
+      "500": "500 Sunucu Hatası",
+      "503": "503 Hizmet Kullanılamıyor",
+      "maintenance": "Bakım",
+      "comingSoon": "Yakında"
+    },
+    "docs": {
+      "gettingStarted": "Başlangıç",
+      "theming": "Tema",
+      "tokens": "Tasarım Tokenları",
+      "i18n": "Uluslararasılaştırma",
+      "changelog": "Değişiklik Günlüğü"
+    }
+  },
+  "actions": {
+    "save": "Kaydet",
+    "cancel": "İptal",
+    "create": "Oluştur",
+    "edit": "Düzenle",
+    "delete": "Sil",
+    "search": "Ara",
+    "filter": "Filtrele",
+    "export": "Dışa aktar",
+    "import": "İçe aktar",
+    "refresh": "Yenile",
+    "confirm": "Onayla",
+    "close": "Kapat",
+    "back": "Geri",
+    "ok": "Tamam",
+    "next": "İleri",
+    "previous": "Önceki",
+    "apply": "Uygula",
+    "reset": "Sıfırla",
+    "viewAll": "Tümünü gör",
+    "learnMore": "Daha fazla bilgi",
+    "copy": "Kopyala",
+    "duplicate": "Çoğalt",
+    "download": "İndir",
+    "upload": "Yükle",
+    "submit": "Gönder",
+    "clear": "Temizle",
+    "selectAll": "Tümünü seç",
+    "deselectAll": "Seçimi kaldır",
+    "showMore": "Daha fazla göster",
+    "showLess": "Daha az göster",
+    "retry": "Tekrar dene",
+    "continue": "Devam et",
+    "signOut": "Çıkış yap"
+  },
+  "header": {
+    "search": "Ara…",
+    "searchPlaceholder": "Sayfa, bileşen, doküman ara…",
+    "notifications": "Bildirimler",
+    "messages": "Mesajlar",
+    "quickCreate": "Hızlı oluştur",
+    "language": "Dil",
+    "theme": "Tema",
+    "fullscreen": "Tam ekran",
+    "exitFullscreen": "Tam ekrandan çık",
+    "profile": "Profil",
+    "settings": "Ayarlar",
+    "profileDescription": "Profilinizi görüntüleyin ve düzenleyin",
+    "settingsDescription": "Hesap tercihleri ve güvenlik",
+    "billingDescription": "Planlar, faturalar ve ödemeler",
+    "logout": "Çıkış yap",
+    "account": "Hesap",
+    "help": "Yardım ve destek",
+    "noNotifications": "Yeni bildirim yok",
+    "noMessages": "Yeni mesaj yok",
+    "markAllRead": "Tümünü okundu işaretle",
+    "viewProfile": "Profili görüntüle",
+    "tenant": "Kiracı",
+    "userMenu": "Kullanıcı menüsü",
+    "openMenu": "Menüyü aç",
+    "commandPalette": "Komut paleti",
+    "newProject": "Yeni proje",
+    "newTask": "Yeni görev",
+    "newUser": "Yeni kullanıcı",
+    "newInvoice": "Yeni fatura"
+  },
+  "sidebar": {
+    "favorites": "Kısayollar",
+    "workspace": "Çalışma alanı",
+    "workspaces": "Çalışma Alanları",
+    "createWorkspace": "Çalışma alanı oluştur",
+    "manageWorkspaces": "Çalışma alanlarını yönet",
+    "collapse": "Kenar çubuğunu daralt",
+    "expand": "Kenar çubuğunu genişlet",
+    "hide": "Menüyü gizle",
+    "show": "Menüyü göster",
+    "searchMenu": "Menüde ara…",
+    "pinned": "Sabitlenmiş",
+    "recent": "Son kullanılan",
+    "noResults": "Menü öğesi bulunamadı",
+    "mainNavigation": "Ana gezinme",
+    "home": "Ana Sayfa"
+  },
+  "theme": {
+    "light": "Açık",
+    "dark": "Koyu",
+    "system": "Sistem",
+    "primaryColor": "Birincil renk",
+    "sidebarMode": "Kenar çubuğu modu",
+    "contentWidth": "İçerik genişliği",
+    "density": "Yoğunluk",
+    "radius": "Köşe yuvarlaklığı",
+    "font": "Yazı tipi",
+    "rtl": "Sağdan sola düzen",
+    "reducedMotion": "Azaltılmış hareket",
+    "customizerTitle": "Tema özelleştirici",
+    "reset": "Varsayılana sıfırla",
+    "sidebarDefault": "Varsayılan",
+    "sidebarCompact": "Kompakt",
+    "sidebarIcon": "Yalnızca simge",
+    "sidebarHover": "Üzerine gelince genişlet",
+    "widthDefault": "Varsayılan",
+    "widthFull": "Tam genişlik",
+    "widthNarrow": "Dar",
+    "widthBoxed": "Kutulu",
+    "densityCompact": "Kompakt",
+    "densityDefault": "Varsayılan",
+    "densityComfortable": "Rahat",
+    "radiusSharp": "Keskin",
+    "radiusDefault": "Varsayılan",
+    "radiusRounded": "Yuvarlak",
+    "fontManrope": "Manrope",
+    "fontInter": "Inter",
+    "fontGeist": "Geist",
+    "headerStyle": "Üst bilgi stili",
+    "headerFixed": "Sabit",
+    "headerStatic": "Statik",
+    "sidebarFixed": "Sabit kenar çubuğu",
+    "customColor": "Özel renk",
+    "fixedHeader": "Sabit başlık"
+  },
+  "pages": {
+    "dashboards": {
+      "title": "Panolar",
+      "description": "Ürününüz genelinde metrikler, KPI'lar ve aktivite özeti."
+    },
+    "overview": {
+      "title": "Genel Bakış",
+      "description": "Performans ve temel göstergelerin üst düzey özeti."
+    },
+    "analytics": {
+      "title": "Analitik",
+      "description": "Trafik, dönüşüm ve kullanıcı davranışına derinlemesine bakış."
+    },
+    "saas": {
+      "title": "SaaS Panosu",
+      "description": "Abonelik, MRR, churn ve büyüme metrikleri bir bakışta."
+    },
+    "crm": {
+      "title": "CRM Panosu",
+      "description": "Satış hattı, anlaşmalar, kişiler ve satış aktivitesi."
+    },
+    "projects": {
+      "title": "Projeler",
+      "description": "Kilometre taşları, teslimatlar ve ekip ilerlemesini takip edin."
+    },
+    "finance": {
+      "title": "Finans",
+      "description": "Gelir, gider, nakit akışı ve finansal raporlama."
+    },
+    "components": {
+      "title": "Bileşenler",
+      "description": "{{appName}} UI bileşenlerini ve kalıplarını keşfedin."
+    },
+    "settings": {
+      "title": "Ayarlar",
+      "description": "Hesap, çalışma alanı ve uygulama tercihlerini yönetin."
+    },
+    "auth": {
+      "title": "Kimlik Doğrulama",
+      "description": "Giriş, kayıt ve şifre kurtarma akışları."
+    },
+    "errors": {
+      "title": "Hata Sayfaları",
+      "description": "404, 500 ve bakım durumu şablonları."
+    },
+    "docs": {
+      "title": "Dokümantasyon",
+      "description": "{{appName}} ile geliştirme için kılavuzlar ve referanslar."
+    },
+    "users": {
+      "title": "Kullanıcılar",
+      "description": "Ekip üyelerini, davetleri ve erişimi yönetin."
+    },
+    "roles": {
+      "title": "Roller ve İzinler",
+      "description": "Rolleri tanımlayın ve her kullanıcının erişimini kontrol edin."
+    },
+    "profile": {
+      "title": "Profil",
+      "description": "Kişisel bilgileriniz ve tercihleriniz."
+    },
+    "billing": {
+      "title": "Faturalandırma",
+      "description": "Planlar, ödeme yöntemleri ve faturalar."
+    },
+    "pricing": {
+      "title": "Fiyatlandırma",
+      "description": "Planları karşılaştırın ve aboneliğinizi yükseltin."
+    },
+    "invoice": {
+      "title": "Fatura",
+      "description": "Faturaları görüntüleyin ve indirin."
+    },
+    "calendar": {
+      "title": "Takvim",
+      "description": "Etkinlikleri, toplantıları ve son tarihleri planlayın."
+    },
+    "kanban": {
+      "title": "Kanban",
+      "description": "İşi sürükle-bırak sütunlarıyla görselleştirin."
+    },
+    "chat": {
+      "title": "Sohbet",
+      "description": "Gerçek zamanlı mesajlaşma ve ekip konuşmaları."
+    },
+    "inbox": {
+      "title": "Gelen Kutusu",
+      "description": "Birleşik mesajlar ve bildirimler."
+    },
+    "fileManager": {
+      "title": "Dosya Yöneticisi",
+      "description": "Dosyalara göz atın, yükleyin ve düzenleyin."
+    },
+    "tasks": {
+      "title": "Görevler",
+      "description": "Görev oluşturun, atayın ve takip edin."
+    },
+    "tables": {
+      "title": "Tablolar",
+      "description": "Sayfalandırmalı, sıralanabilir ve filtrelenebilir veri tabloları."
+    },
+    "charts": {
+      "title": "Grafikler",
+      "description": "Çizgi, çubuk, alan ve pasta grafik örnekleri."
+    },
+    "playground": {
+      "title": "Oyun Alanı",
+      "description": "Bileşenler ve tema tokenlarıyla canlı deney yapın."
+    },
+    "typography": {
+      "title": "Tipografi",
+      "description": "Tip ölçeği, başlıklar ve metin stilleri."
+    },
+    "colors": {
+      "title": "Renkler",
+      "description": "Palet, anlamsal renkler ve kullanım yönergeleri."
+    },
+    "theming": {
+      "title": "Tema",
+      "description": "Açık/koyu mod, yoğunluk ve düzeni özelleştirin."
+    },
+    "tokens": {
+      "title": "Tasarım Tokenları",
+      "description": "Boşluk, yarıçap, gölgeler ve CSS değişkenleri."
+    },
+    "i18n": {
+      "title": "Uluslararasılaştırma",
+      "description": "{{appName}} içinde dil değiştirme ve çeviri kalıpları."
+    },
+    "changelog": {
+      "title": "Değişiklik Günlüğü",
+      "description": "Sürüm notları ve geçmiş."
+    },
+    "notFound": {
+      "title": "Sayfa bulunamadı",
+      "description": "Aradığınız sayfa mevcut değil veya taşınmış."
+    },
+    "serverError": {
+      "title": "Bir şeyler ters gitti",
+      "description": "Beklenmeyen bir hata oluştu. Lütfen daha sonra tekrar deneyin."
+    },
+    "maintenance": {
+      "title": "Bakım modunda",
+      "description": "Planlı bakım yapıyoruz. Kısa süre sonra tekrar deneyin."
+    },
+    "forbidden": {
+      "title": "Erişim reddedildi",
+      "description": "Bu sayfayı görüntüleme izniniz yok."
+    }
+  },
+  "auth": {
+    "login": "Giriş yap",
+    "register": "Kayıt ol",
+    "email": "E-posta adresi",
+    "password": "Şifre",
+    "confirmPassword": "Şifreyi onayla",
+    "forgotPassword": "Şifrenizi mi unuttunuz?",
+    "rememberMe": "Beni hatırla",
+    "signIn": "Giriş yap",
+    "signUp": "Kayıt ol",
+    "signInTitle": "{{appName}}'ye giriş yap",
+    "signUpTitle": "{{appName}} hesabınızı oluşturun",
+    "signInDescription": "Çalışma alanınıza erişmek için bilgilerinizi girin.",
+    "signUpDescription": "Birkaç adımda {{appName}} ile başlayın.",
+    "resetPassword": "Şifreyi sıfırla",
+    "resetPasswordDescription": "E-postanızı girin, size sıfırlama bağlantısı gönderelim.",
+    "newPassword": "Yeni şifre",
+    "currentPassword": "Mevcut şifre",
+    "sendResetLink": "Sıfırlama bağlantısı gönder",
+    "backToLogin": "Girişe dön",
+    "noAccount": "Hesabınız yok mu?",
+    "hasAccount": "Zaten hesabınız var mı?",
+    "orContinueWith": "Veya şununla devam edin",
+    "termsAgreement": "Devam ederek Hizmet Şartlarımızı ve Gizlilik Politikamızı kabul etmiş olursunuz.",
+    "verifyEmail": "E-postanızı doğrulayın",
+    "verifyEmailDescription": "{{email}} adresine bir doğrulama bağlantısı gönderdik.",
+    "twoFactor": "İki faktörlü kimlik doğrulama",
+    "twoFactorDescription": "Kimlik doğrulayıcı uygulamanızdaki kodu girin.",
+    "verificationCode": "Doğrulama kodu",
+    "demoCredentials": "Demo bilgileri",
+    "sessionExpired": "Oturumunuz sona erdi. Lütfen tekrar giriş yapın.",
+    "invalidCredentials": "Geçersiz e-posta veya şifre.",
+    "passwordUpdated": "Şifreniz başarıyla güncellendi."
+  },
+  "table": {
+    "noData": "Veri yok",
+    "noResults": "Filtrelerinizle eşleşen sonuç yok",
+    "loading": "Veri yükleniyor…",
+    "rowsPerPage": "Sayfa başına satır",
+    "page": "Sayfa",
+    "of": "/",
+    "selected": "{{count}} seçili",
+    "selected_one": "{{count}} seçili",
+    "selected_other": "{{count}} seçili",
+    "totalRows": "Toplam {{count}} satır",
+    "totalRows_one": "Toplam {{count}} satır",
+    "totalRows_other": "Toplam {{count}} satır",
+    "sortAsc": "Artan sırala",
+    "sortDesc": "Azalan sırala",
+    "columns": "Sütunlar",
+    "showColumns": "Sütunları göster",
+    "hideColumn": "Sütunu gizle",
+    "actions": "İşlemler",
+    "bulkActions": "Toplu işlemler",
+    "exportCsv": "CSV dışa aktar",
+    "exportExcel": "Excel dışa aktar",
+    "density": "Tablo yoğunluğu",
+    "compact": "Kompakt",
+    "standard": "Standart",
+    "comfortable": "Rahat"
+  },
+  "form": {
+    "required": "Zorunlu",
+    "optional": "İsteğe bağlı",
+    "invalidEmail": "Geçerli bir e-posta adresi girin",
+    "invalidUrl": "Geçerli bir URL girin",
+    "minLength": "En az {{min}} karakter olmalı",
+    "maxLength": "En fazla {{max}} karakter olmalı",
+    "passwordMismatch": "Şifreler eşleşmiyor",
+    "selectOption": "Bir seçenek seçin",
+    "pickDate": "Tarih seçin",
+    "pickTime": "Saat seçin",
+    "uploadFile": "Dosya yükle",
+    "dragDrop": "Dosyaları buraya sürükleyip bırakın veya göz atmak için tıklayın",
+    "maxFileSize": "Maksimum dosya boyutu: {{size}}",
+    "allowedTypes": "İzin verilen türler: {{types}}",
+    "unsavedChanges": "Kaydedilmemiş değişiklikleriniz var",
+    "discardChanges": "Değişiklikler iptal edilsin mi?",
+    "savedSuccessfully": "Değişiklikler başarıyla kaydedildi",
+    "validationError": "Lütfen aşağıdaki hataları düzeltin",
+    "charactersRemaining": "{{count}} karakter kaldı"
+  },
+  "empty": {
+    "defaultTitle": "Henüz bir şey yok",
+    "defaultDescription": "İlk öğenizi oluşturarak başlayın.",
+    "noSearchResults": "Sonuç bulunamadı",
+    "noSearchResultsDescription": "Aramanızı veya filtrelerinizi değiştirmeyi deneyin.",
+    "noNotifications": "Her şey güncel",
+    "noNotificationsDescription": "Yeni bildirimler burada görünecek.",
+    "noMessages": "Mesaj yok",
+    "noMessagesDescription": "Mesajları görmek için bir sohbet başlatın.",
+    "noFiles": "Dosya yok",
+    "noFilesDescription": "Başlamak için dosya yükleyin.",
+    "noTasks": "Görev yok",
+    "noTasksDescription": "İşinizi takip etmek için bir görev oluşturun.",
+    "errorTitle": "Veri yüklenemedi",
+    "errorDescription": "Veri alınırken bir sorun oluştu.",
+    "offlineTitle": "Çevrimdışısınız",
+    "offlineDescription": "Bağlantınızı kontrol edip tekrar deneyin."
+  },
+  "status": {
+    "active": "Aktif",
+    "inactive": "Pasif",
+    "pending": "Beklemede",
+    "approved": "Onaylandı",
+    "rejected": "Reddedildi",
+    "draft": "Taslak",
+    "published": "Yayınlandı",
+    "archived": "Arşivlendi",
+    "completed": "Tamamlandı",
+    "inProgress": "Devam ediyor",
+    "cancelled": "İptal edildi",
+    "overdue": "Gecikmiş",
+    "online": "Çevrimiçi",
+    "offline": "Çevrimdışı",
+    "away": "Uzakta",
+    "busy": "Meşgul",
+    "enabled": "Etkin",
+    "disabled": "Devre dışı",
+    "success": "Başarılı",
+    "warning": "Uyarı",
+    "error": "Hata",
+    "info": "Bilgi",
+    "new": "Yeni",
+    "beta": "Beta"
+  },
+  "common": {
+    "yes": "Evet",
+    "no": "Hayır",
+    "all": "Tümü",
+    "none": "Hiçbiri",
+    "or": "veya",
+    "and": "ve",
+    "of": "/",
+    "to": "-",
+    "from": "den",
+    "by": "tarafından",
+    "at": "saat",
+    "on": "tarih",
+    "in": "içinde",
+    "today": "Bugün",
+    "yesterday": "Dün",
+    "tomorrow": "Yarın",
+    "thisWeek": "Bu hafta",
+    "lastWeek": "Geçen hafta",
+    "thisMonth": "Bu ay",
+    "lastMonth": "Geçen ay",
+    "loading": "Yükleniyor…",
+    "saving": "Kaydediliyor…",
+    "deleting": "Siliniyor…",
+    "processing": "İşleniyor…",
+    "name": "Ad",
+    "description": "Açıklama",
+    "title": "Başlık",
+    "type": "Tür",
+    "status": "Durum",
+    "date": "Tarih",
+    "time": "Saat",
+    "createdAt": "Oluşturulma",
+    "updatedAt": "Güncellenme",
+    "createdBy": "Oluşturan",
+    "updatedBy": "Güncelleyen",
+    "id": "Kimlik",
+    "email": "E-posta",
+    "phone": "Telefon",
+    "address": "Adres",
+    "country": "Ülke",
+    "city": "Şehir",
+    "language": "Dil",
+    "timezone": "Saat dilimi",
+    "currency": "Para birimi",
+    "amount": "Tutar",
+    "total": "Toplam",
+    "subtotal": "Ara toplam",
+    "tax": "Vergi",
+    "discount": "İndirim",
+    "quantity": "Miktar",
+    "price": "Fiyat",
+    "role": "Rol",
+    "permissions": "İzinler",
+    "tags": "Etiketler",
+    "category": "Kategori",
+    "priority": "Öncelik",
+    "low": "Düşük",
+    "medium": "Orta",
+    "high": "Yüksek",
+    "critical": "Kritik",
+    "copied": "Panoya kopyalandı",
+    "copyFailed": "Kopyalanamadı",
+    "comingSoon": "Yakında",
+    "beta": "Beta",
+    "new": "Yeni",
+    "updated": "Güncellendi",
+    "deleted": "Silindi",
+    "perPage": "Sayfa başına",
+    "items": "öğe",
+    "items_one": "öğe",
+    "items_other": "öğe",
+    "results": "sonuç",
+    "results_one": "sonuç",
+    "results_other": "sonuç"
+  },
+  "docs": {
+    "title": "Dokümantasyon",
+    "subtitle": "{{appName}} ile geliştirmek için ihtiyacınız olan her şey",
+    "gettingStarted": "Başlangıç",
+    "gettingStartedDescription": "İlk {{appName}} projenizi kurun, yapılandırın ve çalıştırın.",
+    "installation": "Kurulum",
+    "installationDescription": "Bağımlılıkları ve proje yapısını ayarlayın.",
+    "projectStructure": "Proje yapısı",
+    "projectStructureDescription": "Klasörlerin, rotaların ve modüllerin nasıl düzenlendiğini öğrenin.",
+    "configuration": "Yapılandırma",
+    "configurationDescription": "Uygulama, tema ve gezinme ayarlarını özelleştirin.",
+    "theming": "Tema",
+    "themingDescription": "Açık/koyu modlar, tokenlar ve tema özelleştirici.",
+    "components": "Bileşenler",
+    "componentsDescription": "UI bileşenleri, varyantlar ve birleşim kalıpları.",
+    "layouts": "Düzenler",
+    "layoutsDescription": "Kenar çubuğu, üst bilgi, içerik alanları ve duyarlı kabuklar.",
+    "routing": "Yönlendirme",
+    "routingDescription": "Sayfalar, iç içe rotalar ve gezinme korumaları.",
+    "forms": "Formlar",
+    "formsDescription": "Doğrulama, alan bileşenleri ve gönderim işleme.",
+    "tables": "Tablolar",
+    "tablesDescription": "Sıralama, filtreleme, sayfalandırma ve toplu işlemler.",
+    "charts": "Grafikler",
+    "chartsDescription": "Recharts entegrasyonu ile veri görselleştirme.",
+    "i18n": "Uluslararasılaştırma",
+    "i18nDescription": "Diller, ad alanları ve kullanıcı tercihleriyle senkronizasyon.",
+    "authentication": "Kimlik Doğrulama",
+    "authenticationDescription": "Giriş, kayıt ve korumalı rota kalıpları.",
+    "deployment": "Dağıtım",
+    "deploymentDescription": "Derleme, önizleme ve üretime dağıtım.",
+    "faq": "SSS",
+    "faqDescription": "Sık sorulan sorular ve sorun giderme ipuçları.",
+    "changelog": "Değişiklik Günlüğü",
+    "changelogDescription": "Sürüm geçmişi ve kırıcı değişiklikler.",
+    "apiReference": "API referansı",
+    "apiReferenceDescription": "Yapılandırma nesneleri, hook'lar ve yardımcı fonksiyonlar.",
+    "contributing": "Katkıda bulunma",
+    "contributingDescription": "{{appName}}'yi genişletme yönergeleri.",
+    "onThisPage": "Bu sayfada",
+    "lastUpdated": "Son güncelleme",
+    "editPage": "Bu sayfayı düzenle",
+    "previousPage": "Önceki",
+    "nextPage": "Sonraki",
+    "searchDocs": "Dokümantasyonda ara…",
+    "noResults": "Aramanızla eşleşen dokümantasyon yok."
+  }
+}
