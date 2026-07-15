@@ -43,6 +43,11 @@ export { UsersPage } from './users/UsersPage'
 export { RolesPage } from './users/RolesPage'
 export { ProfilePage } from './users/ProfilePage'
 
+// Customers
+export { CustomersPage } from './customers/CustomersPage'
+export { CustomerCreatePage } from './customers/CustomerCreatePage'
+export { CustomerDetailPage } from './customers/CustomerDetailPage'
+
 // Apps
 export { CalendarPage } from './apps/CalendarPage'
 export { KanbanPage } from './apps/KanbanPage'

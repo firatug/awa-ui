@@ -12,6 +12,9 @@ import {
   ChartsPage,
   ChatPage,
   CrmDashboard,
+  CustomerCreatePage,
+  CustomerDetailPage,
+  CustomersPage,
   DataDisplayPage,
   DesignSystemPage,
   DocsPage,
@@ -111,6 +114,9 @@ export function AppRouter() {
         <Route path="pages/auth/reset-password" element={<ResetPasswordPage />} />
         <Route path="pages/auth/verify-email" element={<TwoFactorPage />} />
         <Route path="pages/users" element={<UsersPage />} />
+        <Route path="pages/customers" element={<CustomersPage />} />
+        <Route path="pages/customers/new" element={<CustomerCreatePage />} />
+        <Route path="pages/customers/:id" element={<CustomerDetailPage />} />
         <Route path="pages/roles" element={<RolesPage />} />
         <Route path="pages/settings/general" element={<AccountSettingsPage />} />
         <Route path="pages/settings/account" element={<AccountSettingsPage />} />

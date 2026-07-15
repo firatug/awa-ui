@@ -67,7 +67,7 @@
       "chat": "Sohbet",
       "inbox": "Gelen Kutusu",
       "fileManager": "Dosya Yöneticisi",
-      "tasks": "Görevler"
+      "tasks": "Yapılacaklar"
     },
     "pages": {
       "auth": "Kimlik Doğrulama",
@@ -77,6 +77,7 @@
       "authReset": "Şifre Sıfırla",
       "authVerify": "E-posta Doğrula",
       "users": "Kullanıcılar",
+      "customers": "Müşteriler",
       "roles": "Roller ve İzinler",
       "settings": "Ayarlar",
       "settingsGeneral": "Genel",
@@ -113,6 +114,7 @@
     "create": "Oluştur",
     "edit": "Düzenle",
     "delete": "Sil",
+    "view": "Görüntüle",
     "search": "Ara",
     "filter": "Filtrele",
     "export": "Dışa aktar",
@@ -281,6 +283,55 @@
       "title": "Kullanıcılar",
       "description": "Ekip üyelerini, davetleri ve erişimi yönetin."
     },
+    "customers": {
+      "title": "Müşteriler",
+      "description": "Müşteri hesaplarını görüntüleyin ve yönetin.",
+      "addCustomer": "Müşteri ekle",
+      "createTitle": "Müşteri ekle",
+      "createDescription": "Yeni müşteri profilini ayrı bir sayfada oluşturun.",
+      "backToList": "Listeye dön",
+      "saveCustomer": "Müşteriyi kaydet",
+      "createSuccess": "{{name}} eklendi.",
+      "notFoundTitle": "Müşteri bulunamadı",
+      "notFoundDescription": "Bu müşteri mevcut değil veya silindi.",
+      "noNotes": "Henüz not yok.",
+      "validation": {
+        "nameRequired": "Müşteri adı zorunludur."
+      },
+      "columns": {
+        "customer": "Müşteri",
+        "plan": "Plan",
+        "mrr": "Aylık gelir",
+        "owner": "Sorumlu"
+      },
+      "status": {
+        "active": "Aktif",
+        "inactive": "Pasif",
+        "lead": "Aday",
+        "churned": "Kayıp"
+      },
+      "sections": {
+        "profile": "Profil",
+        "account": "Hesap",
+        "location": "Konum ve notlar",
+        "overview": "Özet"
+      },
+      "fields": {
+        "name": "Ad soyad",
+        "company": "Şirket",
+        "phone": "Telefon",
+        "plan": "Plan",
+        "owner": "Hesap sorumlusu",
+        "mrr": "Aylık gelir",
+        "city": "Şehir",
+        "country": "Ülke",
+        "industry": "Sektör",
+        "notes": "Notlar",
+        "notesPlaceholder": "Bağlam, sonraki adımlar veya sözleşme notları ekleyin…",
+        "createdAt": "Oluşturulma",
+        "lastContact": "Son iletişim"
+      }
+    },
     "roles": {
       "title": "Roller ve İzinler",
       "description": "Rolleri tanımlayın ve her kullanıcının erişimini kontrol edin."
@@ -324,6 +375,51 @@
     "tasks": {
       "title": "Görevler",
       "description": "Görev oluşturun, atayın ve takip edin."
+    },
+    "todo": {
+      "title": "Yapılacaklar listesi",
+      "description": "Any.do gibi haftanı planla — görev ekle, tamamla ve kartları günler arasında sürükle.",
+      "next7Days": "Önümüzdeki 7 gün",
+      "myLists": "Listelerim",
+      "family": "Ailem",
+      "filter": "Filtre",
+      "clearCompleted": "Tamamlananları temizle",
+      "today": "Bugün",
+      "todayLabel": "Bugün {{day}}",
+      "tomorrowLabel": "Yarın {{day}}",
+      "add": "Ekle",
+      "addTask": "Görev Ekle",
+      "addPlaceholder": "Ne yapılması gerekiyor?",
+      "emptyDay": "Henüz görev yok",
+      "openCount": "{{count}} açık",
+      "statsOpen": "{{count}} açık",
+      "statsDone": "{{count}} tamamlandı",
+      "statsTotal": "{{count}} toplam",
+      "reset": "Örneği sıfırla",
+      "lists": {
+        "personal": "Kişisel",
+        "work": "İş",
+        "family": "Aile"
+      },
+      "detailTitle": "Görev detayı",
+      "detailDescription": "Başlık, liste, hatırlatma ve notları düzenleyin.",
+      "fields": {
+        "title": "Başlık",
+        "list": "Liste",
+        "reminder": "Hatırlatma",
+        "recurring": "Tekrarla",
+        "notes": "Notlar",
+        "notesPlaceholder": "Detay, bağlantı veya sonraki adımları ekleyin…"
+      },
+      "days": {
+        "monday": "Pazartesi",
+        "tuesday": "Salı",
+        "wednesday": "Çarşamba",
+        "thursday": "Perşembe",
+        "friday": "Cuma",
+        "saturday": "Cumartesi",
+        "sunday": "Pazar"
+      }
     },
     "tables": {
       "title": "Tablolar",

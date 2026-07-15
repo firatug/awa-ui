@@ -142,6 +142,12 @@ export const menuGroups: NavGroup[] = [
             icon: 'Users',
           },
           {
+            id: 'pages-customers',
+            labelKey: 'nav.pages.customers',
+            href: '/pages/customers',
+            icon: 'Briefcase',
+          },
+          {
             id: 'pages-roles',
             labelKey: 'nav.pages.roles',
             href: '/pages/roles',

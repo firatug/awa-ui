@@ -67,7 +67,7 @@
       "chat": "Chat",
       "inbox": "Inbox",
       "fileManager": "File Manager",
-      "tasks": "Tasks"
+      "tasks": "To-do list"
     },
     "pages": {
       "auth": "Authentication",
@@ -77,6 +77,7 @@
       "authReset": "Reset Password",
       "authVerify": "Verify Email",
       "users": "Users",
+      "customers": "Customers",
       "roles": "Roles & Permissions",
       "settings": "Settings",
       "settingsGeneral": "General",
@@ -113,6 +114,7 @@
     "create": "Create",
     "edit": "Edit",
     "delete": "Delete",
+    "view": "View",
     "search": "Search",
     "filter": "Filter",
     "export": "Export",
@@ -281,6 +283,55 @@
       "title": "Users",
       "description": "Manage team members, invites, and access."
     },
+    "customers": {
+      "title": "Customers",
+      "description": "Browse and manage your customer accounts.",
+      "addCustomer": "Add customer",
+      "createTitle": "Add customer",
+      "createDescription": "Create a new customer profile on a separate page.",
+      "backToList": "Back to list",
+      "saveCustomer": "Save customer",
+      "createSuccess": "{{name}} was added.",
+      "notFoundTitle": "Customer not found",
+      "notFoundDescription": "This customer does not exist or was removed.",
+      "noNotes": "No notes yet.",
+      "validation": {
+        "nameRequired": "Customer name is required."
+      },
+      "columns": {
+        "customer": "Customer",
+        "plan": "Plan",
+        "mrr": "MRR",
+        "owner": "Owner"
+      },
+      "status": {
+        "active": "Active",
+        "inactive": "Inactive",
+        "lead": "Lead",
+        "churned": "Churned"
+      },
+      "sections": {
+        "profile": "Profile",
+        "account": "Account",
+        "location": "Location & notes",
+        "overview": "Overview"
+      },
+      "fields": {
+        "name": "Full name",
+        "company": "Company",
+        "phone": "Phone",
+        "plan": "Plan",
+        "owner": "Account owner",
+        "mrr": "Monthly revenue",
+        "city": "City",
+        "country": "Country",
+        "industry": "Industry",
+        "notes": "Notes",
+        "notesPlaceholder": "Add context, next steps, or contract details…",
+        "createdAt": "Created",
+        "lastContact": "Last contact"
+      }
+    },
     "roles": {
       "title": "Roles & Permissions",
       "description": "Define roles and control what each user can access."
@@ -324,6 +375,51 @@
     "tasks": {
       "title": "Tasks",
       "description": "Create, assign, and track tasks."
+    },
+    "todo": {
+      "title": "To-do list",
+      "description": "Plan your week like Any.do — add tasks, check them off, and drag cards between days.",
+      "next7Days": "Next 7 days",
+      "myLists": "My lists",
+      "family": "Family",
+      "filter": "Filter",
+      "clearCompleted": "Clear completed",
+      "today": "Today",
+      "todayLabel": "Today {{day}}",
+      "tomorrowLabel": "Tomorrow {{day}}",
+      "add": "Add",
+      "addTask": "Add task",
+      "addPlaceholder": "What needs to be done?",
+      "emptyDay": "No tasks yet",
+      "openCount": "{{count}} open",
+      "statsOpen": "{{count}} open",
+      "statsDone": "{{count}} done",
+      "statsTotal": "{{count}} total",
+      "reset": "Reset sample",
+      "lists": {
+        "personal": "Personal",
+        "work": "Work",
+        "family": "Family"
+      },
+      "detailTitle": "Task details",
+      "detailDescription": "Edit title, list, reminder, and notes.",
+      "fields": {
+        "title": "Title",
+        "list": "List",
+        "reminder": "Reminder",
+        "recurring": "Repeat",
+        "notes": "Notes",
+        "notesPlaceholder": "Add details, links, or next steps…"
+      },
+      "days": {
+        "monday": "Monday",
+        "tuesday": "Tuesday",
+        "wednesday": "Wednesday",
+        "thursday": "Thursday",
+        "friday": "Friday",
+        "saturday": "Saturday",
+        "sunday": "Sunday"
+      }
     },
     "tables": {
       "title": "Tables",

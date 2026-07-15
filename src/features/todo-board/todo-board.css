@@ -1,0 +1,305 @@
+.awa-todo-board {
+  --todo-col-bg: #f4f5f7;
+  --todo-card-shadow: 0 1px 2px rgba(15, 23, 42, 0.04), 0 1px 3px rgba(15, 23, 42, 0.03);
+  --todo-card-shadow-hover: 0 4px 14px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: calc(100vh - 180px);
+}
+
+.awa-todo-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.awa-todo-toolbar-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-inline-end: 4px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+}
+
+.awa-todo-toolbar-title svg {
+  color: var(--color-text-secondary);
+}
+
+.awa-todo-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 34px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+.awa-todo-chip:hover {
+  background: var(--color-surface-sunken);
+  color: var(--color-text-primary);
+}
+
+.awa-todo-chip.is-active {
+  border-color: transparent;
+  background: #edf2ff;
+  color: #3b5bfd;
+}
+
+.awa-todo-chip-ghost {
+  border-color: transparent;
+  background: transparent;
+  color: #3b5bfd;
+}
+
+.awa-todo-chip-ghost:hover {
+  background: #edf2ff;
+  color: #3b5bfd;
+}
+
+.awa-todo-toolbar-spacer {
+  flex: 1;
+  min-width: 8px;
+}
+
+.awa-todo-columns {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+  align-items: stretch;
+}
+
+.awa-todo-column {
+  display: flex;
+  flex-direction: column;
+  width: 272px;
+  min-height: 420px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  background: var(--todo-col-bg);
+  padding: 14px 10px 10px;
+  transition: background-color 160ms ease, box-shadow 160ms ease;
+}
+
+.awa-todo-column.is-over {
+  background: #e8ecf4;
+  box-shadow: inset 0 0 0 1px rgba(59, 91, 253, 0.18);
+}
+
+.awa-todo-column-title {
+  margin: 0 6px 12px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--color-text-primary);
+}
+
+.awa-todo-column-title.is-today {
+  color: #3b5bfd;
+}
+
+.awa-todo-column-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 80px;
+}
+
+.awa-todo-card {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 12px 12px 12px 10px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: var(--todo-card-shadow);
+  cursor: pointer;
+  touch-action: none;
+  transition: box-shadow 160ms ease, opacity 160ms ease, transform 160ms ease;
+}
+
+.awa-todo-card:hover {
+  box-shadow: var(--todo-card-shadow-hover);
+}
+
+.awa-todo-card.is-dragging {
+  opacity: 0.35;
+}
+
+.awa-todo-card.is-overlay {
+  cursor: grabbing;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.16);
+  transform: rotate(1deg) scale(1.02);
+}
+
+.awa-todo-card.is-done .awa-todo-card-title {
+  text-decoration: line-through;
+  color: var(--color-text-muted);
+}
+
+.awa-todo-check {
+  margin-top: 1px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  border: 1.5px solid #c5cad3;
+  background: transparent;
+  color: transparent;
+  flex-shrink: 0;
+  transition: border-color 160ms ease, background-color 160ms ease, color 160ms ease;
+}
+
+.awa-todo-check:hover {
+  border-color: #3b5bfd;
+}
+
+.awa-todo-check.is-checked {
+  border-color: #22c55e;
+  background: #22c55e;
+  color: #fff;
+}
+
+.awa-todo-card-main {
+  min-width: 0;
+  flex: 1;
+}
+
+.awa-todo-card-title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: #1f2937;
+}
+
+.awa-todo-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+  font-size: 12px;
+  color: #8b93a1;
+}
+
+.awa-todo-card-meta svg {
+  width: 12px;
+  height: 12px;
+}
+
+.awa-todo-card-delete {
+  position: absolute;
+  top: 8px;
+  inset-inline-end: 8px;
+  display: inline-flex;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  color: var(--color-text-muted);
+  opacity: 0;
+  transition: opacity 140ms ease, background-color 140ms ease, color 140ms ease;
+}
+
+.awa-todo-card:hover .awa-todo-card-delete,
+.awa-todo-card-delete:focus-visible {
+  opacity: 1;
+}
+
+.awa-todo-card-delete:hover {
+  background: var(--color-danger-soft);
+  color: var(--color-danger);
+}
+
+.awa-todo-add {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 44px;
+  padding: 0 12px;
+  border-radius: 12px;
+  border: none;
+  background: #fff;
+  color: #9aa3b2;
+  font-size: 13px;
+  font-weight: 500;
+  box-shadow: var(--todo-card-shadow);
+  transition: color 160ms ease, box-shadow 160ms ease;
+}
+
+.awa-todo-add:hover {
+  color: var(--color-text-primary);
+  box-shadow: var(--todo-card-shadow-hover);
+}
+
+.awa-todo-add-form {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: var(--todo-card-shadow);
+}
+
+.awa-todo-add-form input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.awa-todo-add-form input::placeholder {
+  color: #9aa3b2;
+  font-weight: 400;
+}
+
+.awa-todo-add-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+.awa-todo-add-actions button {
+  height: 28px;
+  padding: 0 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.awa-todo-add-actions .cancel {
+  color: var(--color-text-muted);
+}
+
+.awa-todo-add-actions .cancel:hover {
+  background: var(--color-surface-sunken);
+}
+
+.awa-todo-add-actions .submit {
+  background: #3b5bfd;
+  color: #fff;
+}
